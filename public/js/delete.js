@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const deletePostHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#project-name').value.trim();
@@ -44,4 +44,4 @@ document
 
 document
   .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+  .addEventListener('click', deletePostHandler);
