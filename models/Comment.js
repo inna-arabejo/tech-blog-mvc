@@ -15,4 +15,4 @@ Comment.init(
   }
 );
 
-module.exports = Project;
+module.exports = Comment;
