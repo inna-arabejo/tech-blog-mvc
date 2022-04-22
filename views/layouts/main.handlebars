@@ -5,32 +5,35 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tech Blog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css"/>
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+    <nav>
+      <ul>
+        <li class="nav-link"><a href="/">Home</a></li>
+        <li class="nav-link"><a href="/dashboard">Dashboard</a></li>
+        {{#if loggedIn}}
+        <li class="nav-link"><a href="/" id="logout">Logout</a></li>
         {{else}}
-        <a href="/login">login</a>
+        <li class="nav-link"><a href="/login">login</a></li>
         {{/if}}
-      </nav>
+      </ul>
+    </nav>
+
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1 class="app-title"><a href="/">Tech Blog</a></h1>
     </header>
+
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
       {{{ body }}}
     </main>
+
+
     <footer>
-      
+      2022 Tech Blog
     </footer>
   </div>
 
