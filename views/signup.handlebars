@@ -1,14 +1,21 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+<div class="card">
+  <div class="card-header">
+    <h2>Signup</h2>
+  </div>
+  <div class="signup" role="tabpanel">
+    <form class="form signup-form" class="card-body">
+      <div>
+        <label for="username-input-signup">Username</label>
+        <input type="text" id="username-input-signup" />
+      </div>
+      <div>
+        <label for="password-input-signup" class="form-label">Password</label>
+        <input type="password" id="password-input-signup" />
+      </div>
+      <button class="btn btn-primary" type="submit">signup</button>
+      <a href="/login">Login instead</a>
+    </form>
+  </div>
 </div>
+
+<script src="/js/signup.js"></script>
