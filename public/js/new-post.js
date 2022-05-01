@@ -2,12 +2,11 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const title = document.querySelector('input[name="post-title"]').value.trim();
-  const body = document.querySelector('textarea[name="post-body"]').value.trim();
+  const content = document.querySelector('input[name="content"]').value.trim();
 
-  if (title && body) {
     const response = await fetch(`/api/post`, {
       method: 'POST',
-      body: JSON.stringify({ title, body }),
+      body: JSON.stringify({ title, content }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -18,10 +17,8 @@ const newFormHandler = async (event) => {
     } else {
       alert('Failed to create new post.');
     }
-  }
 };
 
-
 document
-  .querySelector('.new-post-form')
+  .querySelector('#new-post-form')
   .addEventListener('submit', newFormHandler);
