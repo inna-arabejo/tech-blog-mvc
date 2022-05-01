@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Description
+## Objective
  Build a content management system tech blog where developers can publish articles, post blogs, and comment on a user's post. This will allow developers to read and write about technical concepts, recent advancements, and new technologies. This application will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and express-session npm package for authentication. This site will be deployed in Heroku.
 
 ## Table of Contents
@@ -52,7 +52,12 @@ This should cause the application to find and install all necessary dependencies
 #### Step 4
 
 Edit & Rename .env.Example:
-The file named '.env.Example' needs to be renamed to '.env' and the environment variables in the file need to be refactored. Primarily the DB_PW and SESH_SECRET variables. DB_PW is the password for accessing your database, and SESH_SECRET can be any string you wish it to be.
+The file named '.env.Example' needs to be renamed to '.env'. DB_PW is the password for accessing your database.
+```
+DB_USER='root'
+DB_PW='XXXX'
+DB_NAME='blog_db'
+```
 
 #### Step 5
 
@@ -73,13 +78,13 @@ When you first load into the app, it should load the homepage where public posts
 
 #### Step 3
 
-Tech Blog Features: Create a post, comment on other users' post, or edit/ delete your own existing post.
+Tech Blog Features: Create a post, comment on other users' post, or edit/delete your own existing post.
 In the dashboard, you can either create, edit, or delete a post. Any post you've posted in the dashboard will be made public in the homepage. In the homepage you can see what other users have posted and make a comment.
 
 #### Step 4
 
 Logging Out:
-To log out, simply click the 'Log Out' button. It will ask you to confirm if you wish to log out. After confirming you should get a message that confirms a successful log out and brings you back to the login/sign-up page.
+To log out, simply click the 'Log Out' button. You will be redirected back to the homepage.
 
 ## Deployed Page
 [Tech Blog Deployed Application]()
