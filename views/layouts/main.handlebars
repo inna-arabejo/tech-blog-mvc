@@ -5,29 +5,28 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tech Blog</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <nav>
-      <ul>
-        <li class="nav-link"><a href="/">Home</a></li>
-        <li class="nav-link"><a href="/dashboard">Dashboard</a></li>
-        {{#if loggedIn}}
-        <li class="nav-link"><a href="/" id="logout">Logout</a></li>
-        {{else}}
-        <li class="nav-link"><a href="/login">login</a></li>
-        {{/if}}
-      </ul>
-    </nav>
+  <div class="wrapper">
+    <header class="hero">
+      <div>
+        <nav class="nav">
+            <a class="link" href="/">Home</a>
+            <a class="link" href="/dashboard">Dashboard</a>
+            {{#if loggedIn}}
+            <a class="link" href="/" id="logout">Logout</a>
+            {{else}}
+            <a class="link" href="/login">Login</a>
+            {{/if}}
+        </nav>
+      </div>
 
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1 class="app-title"><a href="/">Tech Blog</a></h1>
+      <h1 class="app-title"><i class="fab"></i>Tech Blog</h1>
     </header>
 
-    <main class="container container-fluid mt-5">
+    <main>
       {{{ body }}}
     </main>
 
@@ -38,7 +37,7 @@
   </div>
 
   <!-- Render script for logged in users only -->
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
