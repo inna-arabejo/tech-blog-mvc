@@ -3,64 +3,83 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
- Build a content management system tech blog where developers can publish articles, blog posts, and opinions. This will allow developers to read and write about technical concepts, recent advancements, and new technologies. This application will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. This site will be deployed in Heroku.
+ Build a content management system tech blog where developers can publish articles, post blogs, and comment on a user's post. This will allow developers to read and write about technical concepts, recent advancements, and new technologies. This application will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and express-session npm package for authentication. This site will be deployed in Heroku.
 
 ## Table of Contents
-* [Installation](#installation)
-* [Task](#task)
-* [Deployed](#deployed)
-* [Screenshots](#screenshots)
-* [Tests](#tests)
-* [License](#license)
-* [Questions](#questions)
+1. [Installation](#installation)
+3. [Steps to Install](#steps-to-install)
+2. [Usage](#usage)
+4. [Deployed Page](#deployed)
+5. [Screenshots](#screenshots)
+6. [Video](#video)
+7. [License](#license)
+8. [Questions](#questions)
 
 ## Installation
-Please install the following dependencies to run the application. 
-1. [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
-2. [MySQL2](https://www.npmjs.com/package/mysql2)
-3. [Sequelize](https://www.npmjs.com/package/sequelize)
-4. [Dotenv](https://www.npmjs.com/package/dotenv)
-5. [Bcrypt](https://www.npmjs.com/package/bcrypt)
-6. [Express-session](https://www.npmjs.com/package/express-session)
-7. [Connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+The following dependencies were installed to run the application. 
+* [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+* [MySQL2](https://www.npmjs.com/package/mysql2)
+* [Sequelize](https://www.npmjs.com/package/sequelize)
+* [Dotenv](https://www.npmjs.com/package/dotenv)
+* [Bcrypt](https://www.npmjs.com/package/bcrypt)
+* [Express-session](https://www.npmjs.com/package/express-session)
+* [Connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 
-## Task
-In order to use this application, the following requirements are met when:
+## Steps to Install
+This application should be hosted locally via Heroku. However, if the application is no longer running, or you just wish to run it locally, you can follow these instructions:
+
+#### Step 1
+
+Download or Clone this repo:
+You can either download the repo as a zip file and unzip it to your computer, or you can clone it down to your computer directly.
+
+#### Step 2
+
+Navigate to App Directory:
+Make sure you are in the directory of the application. It should be a folder named tech-blog-mvc. 
+
+#### Step 3
+
+Install Dependencies:
+Enter the following in the command line.
 ```
-GIVEN a CMS-style blog site
-- WHEN I visit the site for the first time
-    THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
-- WHEN I click on the homepage option
-    THEN I am taken to the homepage
-- WHEN I click on any other links in the navigation
-    THEN I am prompted to either sign up or sign in
-- WHEN I choose to sign up
-    THEN I am prompted to create a username and password
-- WHEN I click on the sign-up button
-    THEN my user credentials are saved and I am logged into the site
-- WHEN I revisit the site at a later time and choose to sign in
-    THEN I am prompted to enter my username and password
-- WHEN I am signed in to the site
-    THEN I see navigation links for the homepage, the dashboard, and the option to log out
-- WHEN I click on the homepage option in the navigation
-    THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
-- WHEN I click on an existing blog post
-    THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
-- WHEN I enter a comment and click on the submit button while signed in
-    THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
-- WHEN I click on the dashboard option in the navigation
-    THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
-- WHEN I click on the button to add a new blog post
-    THEN I am prompted to enter both a title and contents for my blog post
-- WHEN I click on the button to create a new blog post
-    THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
-- WHEN I click on one of my existing posts in the dashboard
-    THEN I am able to delete or update my post and taken back to an updated dashboard
-- WHEN I click on the logout option in the navigation
-  THEN I am signed out of the site
-- WHEN I am idle on the site for more than a set time
-    THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+ npm init -y
+ npm i express
+ npm i
 ```
+This should cause the application to find and install all necessary dependencies.
+
+#### Step 4
+
+Edit & Rename .env.Example:
+The file named '.env.Example' needs to be renamed to '.env' and the environment variables in the file need to be refactored. Primarily the DB_PW and SESH_SECRET variables. DB_PW is the password for accessing your database, and SESH_SECRET can be any string you wish it to be.
+
+#### Step 5
+
+Start the application:
+In the command line, enter 'npm run start'. As long as there are no errors, this should start the server and run it at http://localhost:3001
+
+## Usage
+
+#### Step 1
+
+Run the application:
+As mentioned in the installation section, install and run the application.
+
+#### Step 2
+
+First time accessing:
+When you first load into the app, it should load the homepage where public posts are posted. If you'd like to make a post or comment, the page will redirect you to login or sign-up. To signup, enter a username and password or if you've already created an account, enter you username and password to log in.
+
+#### Step 3
+
+Tech Blog Features: Create a post, comment on other users' post, or edit/ delete your own existing post.
+In the dashboard, you can either create, edit, or delete a post. Any post you've posted in the dashboard will be made public in the homepage. In the homepage you can see what other users have posted and make a comment.
+
+#### Step 4
+
+Logging Out:
+To log out, simply click the 'Log Out' button. It will ask you to confirm if you wish to log out. After confirming you should get a message that confirms a successful log out and brings you back to the login/sign-up page.
 
 ## Deployed Page
 [Tech Blog Deployed Application]()
@@ -71,9 +90,6 @@ GIVEN a CMS-style blog site
 
 ## Video
 [Tech blog walkthrough video]()
-
-## Tests
-Type `"node server.js"`.
 
 
 ## License
