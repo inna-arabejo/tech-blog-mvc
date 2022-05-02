@@ -60,7 +60,7 @@ router.get('/:id', (req, res) => {
           ]
       })
       .then(postData => {
-          if (!postDatadbPostData) {
+          if (!postData) {
               res.status(404).json({ message: 'No post found with this id' });
               return;
           }
