@@ -10,10 +10,8 @@
 3. [Steps to Install](#steps-to-install)
 2. [Usage](#usage)
 4. [Deployed Page](#deployed)
-5. [Screenshots](#screenshots)
-6. [Video](#video)
-7. [License](#license)
-8. [Questions](#questions)
+5. [License](#license)
+6. [Questions](#questions)
 
 ## Installation
 The following dependencies were installed to run the application. 
@@ -87,15 +85,7 @@ Logging Out:
 To log out, simply click the 'Log Out' button. You will be redirected back to the homepage.
 
 ## Deployed Page
-[Tech Blog Deployed Application]()
-
-## Screenshots
-![Tech blog landing page screenshot]()
-![Tech blog main page screenshot]()
-
-## Video
-[Tech blog walkthrough video]()
-
+[Tech Blog Deployed Application](https://tech-blog-inna.herokuapp.com/)
 
 ## License
  This project is covered under MIT.

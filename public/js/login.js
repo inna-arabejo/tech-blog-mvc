@@ -1,4 +1,4 @@
-const loginFormHandler = async (event) => {
+async function loginFormHandler(event) {
   event.preventDefault();
 
   const username = document.querySelector('#username-login').value.trim();
